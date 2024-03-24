@@ -1,6 +1,6 @@
 resource "aws_security_group" "example" {
   # vpc_id = aws_vpc.vpc-test-stn.id
-  name   = "security_group_name"
+  name   = "sentinel-test-sg"
   description = "Example security group for EC2 instances"
 
   ingress {
@@ -26,6 +26,6 @@ resource "aws_security_group" "example" {
   }
 
   tags = {
-    Name = "security_group_name"
+    Name = "sentinel-test-sg"
   }
 }
