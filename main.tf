@@ -1,6 +1,6 @@
 resource "aws_security_group" "example" {
   # vpc_id = aws_vpc.vpc-test-stn.id
-  name   = "sentinel-test-sg"
+  name   = "security_group_name"
   description = "Example security group for EC2 instances"
 
   ingress {
@@ -23,5 +23,9 @@ resource "aws_security_group" "example" {
     # cidr_blocks = ["0.0.0.0/0"]
     cidr_blocks = [var.cidr_blocks]
     description = "Allow all outbound traffic"
+  }
+
+  tags = {
+    Name = "security_group_name"
   }
 }
