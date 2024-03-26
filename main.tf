@@ -1,7 +1,6 @@
-resource "aws_security_group" "example" {
-  # vpc_id = aws_vpc.vpc-test-stn.id
+resource "aws_security_group" "sentinel-test-sg" {
   name   = "sentinel-test-sg"
-  description = "Example security group for EC2 instances"
+  description = "Security group for testing terraform sentinel"
 
   ingress {
     from_port   = 8081
